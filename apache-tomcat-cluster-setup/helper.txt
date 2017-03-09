@@ -1,0 +1,18 @@
+------------------------------------------------------------------------
+D:\Softwares\apache-tomcat-setup\apache-tomcat-8.5.11\conf\*
+
+mod_jk.conf
+server.xml
+workers.properties
+------------------------------------------------------------------------
+D:\DevTools\Apache2\conf\*
+
+httpd.conf
+------------------------------------------------------------------------
+Other links:
+
+https://www.ntu.edu.sg/home/ehchua/programming/howto/ApachePlusTomcat_HowTo.html
+
+
+------------------------------------------------------------------------
+

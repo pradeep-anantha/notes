@@ -1,0 +1,42 @@
+-----------------------------------------------------------------------------------------
+http://files.zend.com/help/Zend-Server/content/enabling_ssl_apache.htm
+
+https://www.sslshopper.com/article-how-to-create-and-install-an-apache-self-signed-certificate.html
+
+http://slproweb.com/products/Win32OpenSSL.html
+
+
+OPEN SSL CERT INSTALLATION:
+
+C:\OpenSSL-Win64\bin>set OPENSSL_CONF=C:/OpenSSL-Win64/bin/openssl.cfg
+
+C:\OpenSSL-Win64\bin>openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout a2z.key -out a2z.crt
+Generating a 2048 bit RSA private key
+..........+++
+...............................+++
+writing new private key to 'a2z.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:NJ
+Locality Name (eg, city) []:JERSEY CITY
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:a2z
+Organizational Unit Name (eg, section) []:it
+Common Name (e.g. server FQDN or YOUR name) []:www.a2z.com
+Email Address []:apr943@gmail.com
+-----------------------------------------------------------------------------------------
+
+
+Post Errros during apache startup:
+
+D:\DevTools\Apache2\Apache24\bin>httpd
+(OS 10048)Only one usage of each socket address (protocol/network address/port) is normally permitted.  : AH00072: make_sock: could not bind to address [::]:443
+(OS 10048)Only one usage of each socket address (protocol/network address/port) is normally permitted.  : AH00072: make_sock: could not bind to address 0.0.0.0:443
+AH00451: no listening sockets available, shutting down
+AH00015: Unable to open logs
